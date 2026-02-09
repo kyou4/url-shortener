@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.4",
+    "@neondatabase/serverless": "^1.0.2",
+    "@types/node": "^24.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.44.6",
+    "hono": "^4.9.11",
+    "redis": "^5.8.3"
+  },
+  "scripts": {
+    "dev": "bun --watch server.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.5"
+  }
+}
