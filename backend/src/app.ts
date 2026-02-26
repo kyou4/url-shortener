@@ -14,7 +14,10 @@ app.use('*', cors({
   origin: [
     'http://localhost:5173',
     'https://url-shortener-green-eight.vercel.app'
-  ]
+  ],
+  allowMethods: ['GET', 'POST', 'OPTIONS'],
+  allowHeaders: ['Content-Type'],
+  credentials: true,
 }))
 
 app.post('/urlgenerate', async (c: Context) => {
