@@ -16,7 +16,7 @@ export default function App() {
     setShortUrl('')
 
     try {
-      const response = await fetch('http://localhost:3000/urlgenerate', {
+      const response = await fetch('http://backend-urlshortener.vercel.app/urlgenerate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
