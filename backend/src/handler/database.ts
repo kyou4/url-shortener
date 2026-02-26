@@ -21,8 +21,8 @@ export const getUrlDataByIndex = async (index:number) => {
     return row
 }
 
-export const checkRedis = async (url:string)=>{
-    const exist = await redisClient.get(url)
-    return exist;
+export async function checkRedis(key: string): Promise<string | null> {
+  const result = await redisClient.get(key);
+  return result ? result.toString() : null;
 }
 
